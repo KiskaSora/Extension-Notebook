@@ -25,10 +25,16 @@
     opacity: 1;
 }
 
-#notebookPanel .react-tabs__tab--selected {
-    background: var(--SmartThemeQuoteColor);
-    border-color: var(--SmartThemeBorderColor);
+#notebookPanel .react-tabs__tab {
     color: var(--SmartThemeBodyColor);
+}
+
+#notebookPanel .react-tabs__tab--selected {
+    background: var(--black50a);
+    background: color-mix(in srgb, var(--SmartThemeQuoteColor) 35%, transparent);
+    border-color: var(--SmartThemeQuoteColor);
+    color: var(--SmartThemeBodyColor);
+    font-weight: bold;
 }
 
 #notebookPanel .ql-toolbar.ql-snow .ql-formats {
@@ -162,4 +168,38 @@
 #notebookPanel .ql-editor ol,
 #notebookPanel .ql-editor ul {
     padding-left: 0.5em;
+}
+
+#notebookPanel .nb-groups {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    margin-bottom: 8px;
+}
+
+#notebookPanel .nb-chip {
+    padding: 4px 10px;
+    border: 1px solid var(--SmartThemeBorderColor);
+    border-radius: 14px;
+    cursor: pointer;
+    font-size: calc(var(--mainFontSize) * 0.9);
+    background: var(--black30a);
+    user-select: none;
+}
+
+#notebookPanel .nb-chip {
+    color: var(--SmartThemeBodyColor);
+}
+
+#notebookPanel .nb-chip.active {
+    background: var(--black50a);
+    background: color-mix(in srgb, var(--SmartThemeQuoteColor) 35%, transparent);
+    border-color: var(--SmartThemeQuoteColor);
+    color: var(--SmartThemeBodyColor);
+    font-weight: bold;
+}
+
+#notebookPanel .nb-group-label {
+    opacity: 0.7;
+    padding: 0 4px;
 }
